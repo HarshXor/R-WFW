@@ -5,7 +5,7 @@
 
 $route->Middleware(
     middleware: 'Logger',
-    constructParams: ['../tmp/app.log', 2097152, ['info', 'error']],
+    constructParams: ['../tmp/' . date(format: "Y-m-d") . '.log', 2097152, ['info', 'error']],
     function: 'write',
     params: ['Incoming request', 'info', [200, 512]]
 );
